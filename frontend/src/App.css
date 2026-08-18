@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5f9;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 750px;
+  height: 700px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  padding: 22px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.chat-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.status {
+  font-size: 14px;
+}
+
+/* Messages area */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 75%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.message p {
+  margin: 5px 0;
+}
+
+.sender {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bot-message {
+  background: #e8eefc;
+  margin-right: auto;
+}
+
+.user-message {
+  background: #2563eb;
+  color: white;
+  margin-left: auto;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-area input:focus {
+  border-color: #2563eb;
+}
+
+.input-area button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-area button:hover {
+  background: #1d4ed8;
+}
+
+.input-area button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+
+  .chat-container {
+    height: 90vh;
+    border-radius: 12px;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+
+  .chat-header h1 {
+    font-size: 20px;
+  }
+  .typing {
+  opacity: 0.7;
+}
+
+.typing p {
+  margin: 5px 0;
+  font-style: italic;
+}
+.clear-button {
+  margin-left: 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.clear-button:hover {
+  background: #e8eefc;
+}
+}
